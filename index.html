@@ -1,0 +1,27 @@
+<center>
+<h1>multiplier</h1>
+
+<input id="one" type="number"><br>
+<input id="two" type="number"><br>
+<button onclick="multiply()">multiply</button>
+<p id="result" >result:</p>
+</center>
+
+<script>
+    var num1=document.getElementById("one")
+    var num2=document.getElementById("two")
+    var res=document.getElementById("result")
+    var res1=res.textContent
+    res.textContent="result:nil"
+    
+
+    function multiply() {
+        var n1=Number(num1.value)
+        var n2=Number(num2.value)
+
+        var total=n1*n2
+
+        res.textContent=(res1+total)
+
+    }
+</script>

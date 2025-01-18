@@ -1,0 +1,35 @@
+<center>
+<h1>
+    Guess the number from 1 to 10
+</h1>
+<input  id="one" type="number">
+<button onclick="numberguesser()">check</button>
+<p id="guess">guess it</p>
+<p id="score">score:</p>
+</center>
+
+<script>
+    var n1=document.getElementById("one")
+    var guess1=document.getElementById("guess")
+    var score=document.getElementById("score")
+    var scr=score.textContent
+    var score1=10
+    score.textContent="score:10"
+
+    
+    function numberguesser(){
+        var n1val=Number(n1.value)
+        var random=Math.floor(Math.random()*10)+1
+        console.log(random);
+        
+        if (n1val==random) {
+            guess1.textContent=("you are right")
+            alert("you won..")
+
+        } else {
+            score1--
+            score.textContent=(scr+score1)
+            guess1.textContent="you are wrong"
+        }
+    }
+</script>
